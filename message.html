@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Message 💌</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #ffc8df, #cfc3ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 28px;
+    animation: rise 7s linear infinite;
+}
+
+.h1 { left: 10%; animation-delay: 0s; }
+.h2 { left: 30%; animation-delay: 2s; }
+.h3 { left: 55%; animation-delay: 4s; }
+.h4 { left: 80%; animation-delay: 1s; }
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Letter */
+.letter {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 650px;
+    padding: 40px 30px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(100,50,100,0.2);
+
+    animation: open 1.2s ease;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotate(-4deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.envelope {
+    font-size: 65px;
+    animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    color: #e64d91;
+    font-size: clamp(35px, 8vw, 55px);
+    margin: 15px 0;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #60405a;
+}
+
+.signature {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #e64d91;
+    font-weight: bold;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #e64d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.back:hover {
+    transform: scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating decorations -->
+<div class="heart h1">💗</div>
+<div class="heart h2">💖</div>
+<div class="heart h3">💕</div>
+<div class="heart h4">✨</div>
+
+<!-- Letter -->
+<div class="letter">
+
+    <div class="envelope">💌</div>
+
+    <h1>A Little Message</h1>
+
+    <div class="message">
+
+        <p>
+            Heyyy! 💗
+        </p>
+
+        <p>
+            If you are reading this, you actually
+            clicked on the message! 👀
+        </p>
+
+        <p>
+            I just wanted to say that you are
+            genuinely someone special. ✨
+        </p>
+
+        <p>
+            I hope your day is filled with
+            happiness, laughter, and lots of
+            beautiful moments. 🎀
+        </p>
+
+        <p>
+            And remember...
+            this is only the beginning of your
+            little surprise. 💕
+        </p>
+
+    </div>
+
+    <div class="signature">
+        With lots of love 💗
+    </div>
+
+    <a href="
