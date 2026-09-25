@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories 📸</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #c9b6ff, #ffc9e2);
+    color: #5d3b58;
+    overflow-x: hidden;
+}
+
+/* Background decorations */
+.float {
+    position: fixed;
+    bottom: -50px;
+    font-size: 28px;
+    animation: floatUp 8s linear infinite;
+    z-index: 0;
+}
+
+.f1 { left: 8%; animation-delay: 0s; }
+.f2 { left: 30%; animation-delay: 2s; }
+.f3 { left: 55%; animation-delay: 4s; }
+.f4 { left: 80%; animation-delay: 1s; }
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main */
+.container {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    max-width: 900px;
+    margin: auto;
+    padding: 45px 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #df4c91;
+    font-size: clamp(40px, 8vw, 60px);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Memory cards */
+.memories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.memory {
+    background: rgba(255,255,255,0.88);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 12px 30px rgba(90,50,100,0.18);
+    transition: 0.35s;
+    animation: appear 1s ease backwards;
+}
+
+.memory:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.memory:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.memory:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.memory:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) rotate(-3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.memory:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+/* Photo placeholders */
+.photo {
+    height: 180px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffd1e5, #d8ccff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.memory h2 {
+    color: #df4c91;
+    margin: 8px 0;
+}
+
+.memory p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Back button */
+.back {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #df4c91;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .memories {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="float f1">📸</div>
+<div class="float f2">💗</div>
+<div class="float f3">✨</div>
+<div class="float f4">🎀</div>
+
+<div class="container">
+
+    <h1>Our Memories 📸</h1>
+
+    <p class="subtitle">
+        Little moments that deserve a place here... 💕
+    </p>
+
+    <div class="memories">
+
+        <div class="memory">
+            <div class="photo">📸</div>
+            <h2>Memory One</h2>
+            <p>A moment worth remembering ✨</p>
+        </div>
+
+        <div class="memory">
+            <div class="photo">💗</div>
+            <h2>Memory Two</h2>
+            <p>One of those moments that made us smile.</p>
+        </div>
+
+        <div class="memory">
+            <div class="photo">🎀</div>
+            <h2>Memory Three</h2>
+            <p>A little memory with a lot of meaning.</p>
+        </div>
+
+        <div class="memory">
+            <div class="photo">✨</div>
+            <h2>Memory Four</h2>
+            <p>And there are still so many more to come!</p>
+        </div>
+
+    </div>
+
+    <a href="bday.html" class="back">
+        ← Back to Surprise
+    </a>
+
+</div>
+
+</body>
+</html>
